@@ -1,0 +1,131 @@
+body * {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+
+$slider-colour: #303036;
+$highlight-colour: #30BCED;
+
+.header {
+  display: grid;
+  text-align: center;
+
+
+  .title {
+    margin: 10px 0;
+    font-size: 60px;
+  }
+
+  .select-blog {
+    width: 300px;
+    text-align-last: center;
+    text-align: center;
+    justify-self: center;
+    margin-top: 6px;
+    padding: 2px;
+
+    background: $slider-colour;
+    color: white;
+  }
+
+}
+
+.sidebar {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 15% 80% 5%;
+  grid-template-columns: 100% 93vw;
+  width: 83px;
+  height: 100%;
+  top: 0;
+
+  background: $highlight-colour;
+  box-shadow: 4px 0 4px rgba(0, 0, 0, 0.25);
+
+  .slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    padding: 0 10px;
+    overflow: auto;
+    z-index: -1;
+    $loadtime: 1s;
+    animation: slide-open $loadtime;
+    @keyframes slide-open {
+      from {
+        right: 1300px;
+      }
+      to {
+        right: 0;
+      }
+    }
+
+    background: $slider-colour;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .loading-icon-shown {
+
+    }
+
+    .loading-icon-hidden {
+      display: none;
+    }
+
+
+    .article-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 295px;
+      height: 335px;
+      background: $highlight-colour;
+      margin: 20px;
+      animation: fadein $loadtime;
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      h2 {
+        font-size: 23px;
+        text-align: center;
+        margin: 10px 10px 2px;
+
+        a {
+          text-decoration: none;
+          color: black;
+
+          &:active {
+            color: #303036;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &:visited {
+            color: black;
+          }
+        }
+      }
+
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 0 15px;
+      }
+    }
+  }
+
+}
+
+

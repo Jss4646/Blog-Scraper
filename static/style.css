@@ -1,0 +1,116 @@
+body * {
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.header {
+    display: grid;
+    text-align: center;
+}
+
+.header .title {
+    margin: 10px 0;
+    font-size: 60px;
+}
+
+.header .select-blog {
+    width: 300px;
+    text-align-last: center;
+    text-align: center;
+    justify-self: center;
+    margin-top: 6px;
+    padding: 2px;
+    background: #303036;
+    color: white;
+}
+
+.sidebar {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 15% 80% 5%;
+    grid-template-columns: 100% 93vw;
+    width: 83px;
+    height: 100%;
+    top: 0;
+    background: #30BCED;
+    box-shadow: 4px 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar .slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    padding: 0 10px;
+    overflow: auto;
+    z-index: -1;
+    animation: slide-open 1s;
+    background: #303036;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes slide-open {
+    from {
+        right: 1300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.sidebar .slider .loading-icon-hidden {
+    display: none;
+}
+
+.sidebar .slider .article-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 295px;
+    height: 335px;
+    background: #30BCED;
+    margin: 20px;
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sidebar .slider .article-wrapper h2 {
+    font-size: 23px;
+    text-align: center;
+    margin: 10px 10px 2px;
+}
+
+.sidebar .slider .article-wrapper h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar .slider .article-wrapper h2 a:active {
+    color: #303036;
+}
+
+.sidebar .slider .article-wrapper h2 a:hover {
+    text-decoration: underline;
+}
+
+.sidebar .slider .article-wrapper h2 a:visited {
+    color: black;
+}
+
+.sidebar .slider .article-wrapper p {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

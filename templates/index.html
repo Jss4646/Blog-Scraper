@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Blog Scraper</title>
+    {#    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">#}
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    {#    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='normalize.css') }}">#}
+    <link rel="stylesheet" type="text/css" href="/static/normalize.css">
+</head>
+<body>
+<div class="header">
+    <h1 class="title">Blog Scraper</h1>
+    <select onchange="getArticles()" class="select-blog">
+        <option value="The-Crazy-Programmer">The Crazy Programmer</option>
+        <option value="CSS-Tricks">CSS Tricks</option>
+        <option value="Stack-Abuse">Stack Abuse</option>
+    </select>
+</div>
+<div class="sidebar">
+    <div class="slider">
+        {#            <img class="loading-icon-hidden" id="loading-icon" src="/static/images/loading-icon.svg" alt="loading icon" style="display: none">#}
+    </div>
+</div>
+</body>
+{#    <script src="{{ url_for('static', filename='main.js') }}"></script>#}
+<script src="/static/main.js" type="javascript"></script>
+</html>
