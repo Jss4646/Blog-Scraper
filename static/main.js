@@ -57,7 +57,7 @@ const getArticles = function () {
 
     const siteName = document.querySelector('.select-blog').value;
 
-    fetch(`http://127.0.0.1:5000/get-articles/${siteName}`).then((data) =>
+    fetch(`https://blog-scrapper.appspot.com/get-articles/${siteName}`).then((data) =>
         data.json().then(function (articles) {
             //Clears the html off the page if you are selecting a new
             if (articleArray.length !== 0) {
