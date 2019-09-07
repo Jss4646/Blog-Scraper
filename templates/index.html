@@ -23,6 +23,6 @@
     </div>
 </div>
 </body>
-<script src="{{ url_for('static', filename='main.js') }}"></script>
-{#<script src="/static/main.js" type="javascript"></script>#}
+{#<script src="{{ url_for('static', filename='main.js') }}"></script>#}
+<script src="/static/main.js?{{ App.Version }}" type="javascript"></script>
 </html>
